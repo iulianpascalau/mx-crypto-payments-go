@@ -9,7 +9,7 @@ pipeline {
         STAGING_VM_USER = 'ubuntu'
         // You will need to add this credential in Jenkins
         STAGING_VM_HOST = credentials('crypto-payment-staging-vm-ip')
-        PROJECT_PATH = '/home/ubuntu/mx-crypto-payments'
+        PROJECT_PATH = '/home/ubuntu/mx-crypto-payments-go'
     }
 
     stages {

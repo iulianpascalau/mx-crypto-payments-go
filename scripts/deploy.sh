@@ -2,7 +2,7 @@
 set -e
 
 # Configuration
-PROJECT_DIR="/home/ubuntu/mx-crypto-payments"
+PROJECT_DIR="/home/ubuntu/mx-crypto-payments-go"
 SERVICE_NAME="crypto-payments-service"
 
 # Check argument

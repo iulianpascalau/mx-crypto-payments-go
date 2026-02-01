@@ -3,7 +3,7 @@
 # Configuration
 USER_NAME="ubuntu"
 APP_NAME="crypto-payments-service"
-APP_DIR="/home/${USER_NAME}/mx-crypto-payments"
+APP_DIR="/home/${USER_NAME}/mx-crypto-payments-go"
 EXEC_PATH="${APP_DIR}/crypto-payments-server"
 
 # Create the service file content
