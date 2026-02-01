@@ -3,7 +3,7 @@ package process
 import (
 	"context"
 
-	"github.com/iulianpascalau/mx-crypto-payments/common"
+	"github.com/iulianpascalau/mx-crypto-payments-go/common"
 	"github.com/multiversx/mx-chain-core-go/data/transaction"
 	"github.com/multiversx/mx-sdk-go/core"
 	"github.com/multiversx/mx-sdk-go/data"

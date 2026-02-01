@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/iulianpascalau/mx-crypto-payments/common"
+	"github.com/iulianpascalau/mx-crypto-payments-go/common"
 	"github.com/multiversx/mx-chain-core-go/core/check"
 	logger "github.com/multiversx/mx-chain-logger-go"
 	"github.com/multiversx/mx-sdk-go/data"

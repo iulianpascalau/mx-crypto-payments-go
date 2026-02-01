@@ -7,8 +7,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/iulianpascalau/mx-crypto-payments/config"
-	"github.com/iulianpascalau/mx-crypto-payments/factory"
+	"github.com/iulianpascalau/mx-crypto-payments-go/config"
+	"github.com/iulianpascalau/mx-crypto-payments-go/factory"
 	"github.com/multiversx/mx-sdk-go/interactors"
 	"github.com/stretchr/testify/require"
 )

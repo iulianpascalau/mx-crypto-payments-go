@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/iulianpascalau/mx-crypto-payments/integrationTests/framework"
+	"github.com/iulianpascalau/mx-crypto-payments-go/integrationTests/framework"
 	logger "github.com/multiversx/mx-chain-logger-go"
 	"github.com/stretchr/testify/require"
 )

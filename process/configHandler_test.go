@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/iulianpascalau/mx-crypto-payments/testsCommon"
+	"github.com/iulianpascalau/mx-crypto-payments-go/testsCommon"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -7,7 +7,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/iulianpascalau/mx-crypto-payments/testsCommon"
+	"github.com/iulianpascalau/mx-crypto-payments-go/testsCommon"
 	"github.com/multiversx/mx-chain-core-go/data/transaction"
 	"github.com/multiversx/mx-sdk-go/core"
 	"github.com/multiversx/mx-sdk-go/data"
