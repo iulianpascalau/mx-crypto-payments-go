@@ -3,8 +3,8 @@ package framework
 import (
 	"context"
 
-	"github.com/iulianpascalau/mx-crypto-payments/factory"
-	"github.com/iulianpascalau/mx-crypto-payments/process"
+	"github.com/iulianpascalau/mx-crypto-payments-go/factory"
+	"github.com/iulianpascalau/mx-crypto-payments-go/process"
 	"github.com/multiversx/mx-chain-core-go/data/api"
 	"github.com/multiversx/mx-chain-core-go/data/transaction"
 	"github.com/multiversx/mx-sdk-go/core"

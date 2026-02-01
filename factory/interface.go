@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/gin-gonic/gin"
-	"github.com/iulianpascalau/mx-crypto-payments/common"
+	"github.com/iulianpascalau/mx-crypto-payments-go/common"
 )
 
 // SQLiteWrapper defines the behavior of a SQLite database wrapper

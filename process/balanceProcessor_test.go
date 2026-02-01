@@ -5,8 +5,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/iulianpascalau/mx-crypto-payments/common"
-	"github.com/iulianpascalau/mx-crypto-payments/testsCommon"
+	"github.com/iulianpascalau/mx-crypto-payments-go/common"
+	"github.com/iulianpascalau/mx-crypto-payments-go/testsCommon"
 	"github.com/multiversx/mx-chain-core-go/data/vm"
 	"github.com/multiversx/mx-sdk-go/core"
 	"github.com/multiversx/mx-sdk-go/data"

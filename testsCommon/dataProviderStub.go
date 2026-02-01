@@ -1,6 +1,6 @@
 package testsCommon
 
-import "github.com/iulianpascalau/mx-crypto-payments/common"
+import "github.com/iulianpascalau/mx-crypto-payments-go/common"
 
 // DataProviderStub -
 type DataProviderStub struct {

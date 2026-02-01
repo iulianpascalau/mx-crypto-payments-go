@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/iulianpascalau/mx-crypto-payments/common"
+	"github.com/iulianpascalau/mx-crypto-payments-go/common"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/multiversx/mx-chain-core-go/core/check"
 )

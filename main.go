@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/iulianpascalau/mx-crypto-payments/config"
-	"github.com/iulianpascalau/mx-crypto-payments/factory"
+	"github.com/iulianpascalau/mx-crypto-payments-go/config"
+	"github.com/iulianpascalau/mx-crypto-payments-go/factory"
 	"github.com/joho/godotenv"
 	logger "github.com/multiversx/mx-chain-logger-go"
 	"github.com/multiversx/mx-chain-logger-go/file"
@@ -33,6 +33,12 @@ const (
 	envFile               = "./.env"
 	pemFilesSearchPattern = "*.pem"
 )
+
+// FileLoggingHandler interface for the logger
+type FileLoggingHandler interface {
+	ChangeFileLifeSpan(newDuration time.Duration, newSizeInMB uint64) error
+	Close() error
+}
 
 // appVersion should be populated at build time using ldflags
 var appVersion = "undefined"
@@ -194,12 +200,6 @@ func run(ctx *cli.Context) error {
 	log.Info("application closing")
 
 	return nil
-}
-
-// FileLoggingHandler interface for the logger
-type FileLoggingHandler interface {
-	ChangeFileLifeSpan(newDuration time.Duration, newSizeInMB uint64) error
-	Close() error
 }
 
 func attachFileLogger(log logger.Logger, saveLogFile bool, workingDir string) error {
