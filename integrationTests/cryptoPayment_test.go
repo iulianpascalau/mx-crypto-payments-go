@@ -27,7 +27,7 @@ func TestPauseUnpause(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	cryptoService.Setup(ctx, 500000)
+	cryptoService.Setup(ctx, 500000, framework.GetContractPath("credits"))
 	defer cryptoService.TearDown()
 
 	cryptoService.CreateService()
@@ -142,7 +142,7 @@ func TestCallingSCWhenBalanceIsAvailableInSync(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	cryptoService.Setup(ctx, 500000)
+	cryptoService.Setup(ctx, 500000, framework.GetContractPath("credits"))
 	defer cryptoService.TearDown()
 
 	cryptoService.CreateService()

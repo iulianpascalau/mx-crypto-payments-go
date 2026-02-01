@@ -25,7 +25,7 @@ func EnsureContractCredits(contractURL string, targetDir string) error {
 		return nil
 	}
 
-	fmt.Printf("Downloading credits contract from %s...\n", contractURL)
+	log.Info(fmt.Sprintf("Downloading credits contract from %s...", contractURL))
 	resp, err := http.Get(contractURL)
 	if err != nil {
 		return fmt.Errorf("failed to download contract: %w", err)
@@ -112,6 +112,6 @@ func EnsureContractCredits(contractURL string, targetDir string) error {
 		}
 	}
 
-	fmt.Println("Successfully downloaded and extracted credits contract.")
+	log.Info("Successfully downloaded and extracted credits contract.")
 	return nil
 }
