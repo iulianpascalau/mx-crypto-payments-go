@@ -19,7 +19,11 @@ func init() {
 	if !IsChainSimulatorIsRunning() {
 		return
 	}
-	err := EnsureContractCredits(ContractCreditsURL)
+
+	root := traverse("integrationTests")
+	extractTarget := filepath.Join(root, "contracts")
+
+	err := EnsureContractCredits(ContractCreditsURL, extractTarget)
 	if err != nil {
 		fmt.Printf("WARNING: Failed to ensure credits contract: %v\n", err)
 		// We deliberately panic here because if we can't get the contract, tests will fail anyway
@@ -28,10 +32,8 @@ func init() {
 }
 
 // EnsureContractCredits will fetch the provided contract release artifact and unzip it
-func EnsureContractCredits(contractURL string) error {
-	root := traverse("integrationTests")
-	extractTarget := filepath.Join(root, "contracts")
-	contractDir := filepath.Join(extractTarget, "credits")
+func EnsureContractCredits(contractURL string, targetDir string) error {
+	contractDir := filepath.Join(targetDir, "credits")
 	contractPath := filepath.Join(contractDir, "credits.wasm")
 
 	if _, err := os.Stat(contractPath); err == nil {
@@ -76,17 +78,17 @@ func EnsureContractCredits(contractURL string) error {
 		_ = r.Close()
 	}()
 
-	err = os.MkdirAll(extractTarget, 0755)
+	err = os.MkdirAll(targetDir, 0755)
 
 	if err != nil {
 		return fmt.Errorf("failed to create target dir: %w", err)
 	}
 
 	for _, f := range r.File {
-		fpath := filepath.Join(extractTarget, f.Name)
+		fpath := filepath.Join(targetDir, f.Name)
 
 		// ZipSlip check
-		if !strings.HasPrefix(fpath, filepath.Clean(extractTarget)+string(os.PathSeparator)) {
+		if !strings.HasPrefix(fpath, filepath.Clean(targetDir)+string(os.PathSeparator)) {
 			return fmt.Errorf("illegal file path: %s", fpath)
 		}
 
