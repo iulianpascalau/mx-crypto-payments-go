@@ -19,6 +19,9 @@ func TestPauseUnpause(t *testing.T) {
 	if !framework.IsChainSimulatorIsRunning() {
 		t.Skip("No chain simulator instance running found. Skipping slow test")
 	}
+
+	framework.EnsureTestContracts(t)
+
 	cryptoService := framework.NewCryptoPaymentService(t)
 
 	ctx, cancel := context.WithCancel(context.Background())
@@ -131,6 +134,9 @@ func TestCallingSCWhenBalanceIsAvailableInSync(t *testing.T) {
 	if !framework.IsChainSimulatorIsRunning() {
 		t.Skip("No chain simulator instance running found. Skipping slow test")
 	}
+
+	framework.EnsureTestContracts(t)
+
 	cryptoService := framework.NewCryptoPaymentService(t)
 
 	ctx, cancel := context.WithCancel(context.Background())

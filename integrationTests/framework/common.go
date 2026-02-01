@@ -3,6 +3,9 @@ package framework
 import (
 	"path/filepath"
 	"runtime"
+	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 // PaymentGasLimit is the gas limit for the payment transaction
@@ -10,6 +13,15 @@ const PaymentGasLimit = 50000
 
 // CallGasLimit is the gas limit for a SC call
 const CallGasLimit = 3000000
+
+// EnsureTestContracts test if the contracts are present in the project, if not, download them
+func EnsureTestContracts(tb testing.TB) {
+	root := traverse("integrationTests")
+	extractTarget := filepath.Join(root, "contracts")
+
+	err := EnsureContractCredits(ContractCreditsURL, extractTarget)
+	require.NoError(tb, err)
+}
 
 // GetContractPath returns the absolute path to the wasm file
 func GetContractPath(contractName string) string {
