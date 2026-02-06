@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	ContractCreditsVersionTag = "v1.0.0"
+	ContractCreditsVersionTag = "v1.0.1"
 	ContractCreditsURL        = "https://github.com/iulianpascalau/credits-contract-rs/releases/download/" + ContractCreditsVersionTag + "/credits-contract.zip"
 )
 
